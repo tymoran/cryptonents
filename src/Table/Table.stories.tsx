@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Table } from './Table';
+import { PillFilter } from "./Table/PillFilter";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -34,6 +35,8 @@ Default.args = {
     {
       Header: "Role",
       accessor: "role",
+      Filter: PillFilter,
+      filter: 'includes'
     },
   ],
   data: [

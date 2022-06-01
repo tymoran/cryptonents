@@ -7,9 +7,9 @@ interface InputProps {
    */
   disabled?: boolean;
   /**
-   * Input contents.
+   * Input content.
    */
-  label: string;
+  value: string;
   /**
    * Placeholder displayed when there is no text.
    */
@@ -19,9 +19,9 @@ interface InputProps {
    */
    showMax: boolean;
    /**
-    * Optional click handler.
+    * Optional change handler.
     */
-   onClick?: () => void;
+   onChange?: () => void;
    /**
     * Optional MAX click handler.
     */
@@ -33,8 +33,8 @@ interface InputProps {
  */
 export const Input = ({
   placeholder="Placeholder ...",
+  value = '',
   disabled,
-  label,
   onMax,
   showMax,
   ...props
@@ -49,7 +49,7 @@ export const Input = ({
   return (
     <div className={`flex relative inline-block text-sm ${disabled ? 'pointer-events-none cursor-not-allowed opacity-50' : ''}`}>
         <input type="text" className={`flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none ${showMax ? 'rounded-l-lg' : 'rounded-lg'}`} placeholder={placeholder} {...props}/>
-        {showMax && <span className="cursor-pointer text-blue-600 font-medium rounded-r-md inline-flex items-center px-3 border-t bg-white border-r border-b  border-gray-300 text-gray-500 shadow-sm" onClick={onMax}>
+        {showMax && <span className="inline-flex items-center px-3 font-medium text-gray-500 text-blue-600 bg-white border-t border-b border-r border-gray-300 shadow-sm cursor-pointer rounded-r-md" onClick={onMax}>
             MAX
         </span>}
     </div>

@@ -3,9 +3,9 @@ import './button.css';
 
 interface ButtonProps {
   /**
-   * Is this the principal call to action on the page?
+   * Is this a regular button or a call to action?
    */
-  primary?: boolean;
+   secondary?: boolean;
   /**
    * Override the color with another tailwind color.
    */
@@ -36,7 +36,7 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
+  secondary = false,
   customColor,
   disabled,
   label,
@@ -46,10 +46,10 @@ export const Button = ({
 }: ButtonProps) => {
   const color = customColor ?
       customColor :
-      (primary ? 'blue' : 'stone');
+      (secondary ? 'stone' : 'blue');
 
-  const tones = primary ? [600, 700, 500, 200] : [300, 400, 300, 200];
-  const text = primary ? 'white' : 'black';
+  const tones = secondary ? [300, 400, 300, 200] : [600, 700, 500, 200];
+  const text = secondary ?  'black': 'white';
 
   return (
     <div className={fullWidth ? "block" : "inline-block"}><button

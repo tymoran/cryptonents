@@ -18,12 +18,12 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  primary: true,
   label: 'Button',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  secondary: true,
   label: 'Button',
 };
 
@@ -31,7 +31,6 @@ Secondary.args = {
 export const PrimaryDisabled = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 PrimaryDisabled.args = {
-  primary: true,
   disabled: true,
   label: 'Button',
 };
@@ -39,13 +38,13 @@ PrimaryDisabled.args = {
 export const SecondaryDisabled = Template.bind({});
 SecondaryDisabled.args = {
   label: 'Button',
+  secondary: true,
   disabled: true
 };
 
 export const Destroy = Template.bind({});
 Destroy.args = {
   label: 'Button',
-  primary: true,
   customColor: 'red'
 };
 

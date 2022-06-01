@@ -43,7 +43,7 @@ export const Pill = ({
 
   return (
     <div
-      className={['inline', 'py-1', 'px-3', active && !outline ? `bg-${color}-${tones[0]}` : '', active && outline ? `outline-${color}-${tones[0]} outline` : '','text-xs', 'text-center', 'rounded-full', `text-${text}`].join(' ')}
+      className={['inline', 'py-1', 'px-3', active && !outline ? `bg-${color}-${tones[0]}` : '', active && outline ? `outline-${color}-${tones[0]} outline` : '','text-sm', 'text-center', 'rounded-full', `text-${text}`].join(' ')}
       {...props}
     >
       {label}

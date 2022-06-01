@@ -6,6 +6,7 @@
   "types": "lib/index.d.ts",
   "repository": "https://github.com/tymoran/cryptonents",
   "author": "Tymoran <tymoran@protonmail.com>",
+  "homepage": "https://tymoran.github.io/cryptonents",
   "license": "MIT",
   "private": true,
   "devDependencies": {
@@ -24,6 +25,7 @@
     "@types/react": "^18.0.9",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.14",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -39,8 +41,9 @@
     "react-dom": "^18.1.0"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook:build": "build-storybook",
+    "storybook:deploy": "npm run storybook:build && gh-pages -d storybook-static",
+    "storybook:dev": "start-storybook -p 6006",
     "build": "rollup -c"
   },
   "dependencies": {

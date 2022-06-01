@@ -42,20 +42,20 @@ export const ProjectCard = ({
   const text = color + '-' + tones[1];
 
   return (
-    <div className="overflow-hidden shadow-lg rounded-lg h-90 w-64 cursor-pointer m-auto">
-        <a href="#" className="w-full block h-full">
-            <img alt="blog photo" src="https://placehold.jp/3d4070/ffffff/150x150.png" className="max-h-40 w-full object-cover"/>
-            <div className="bg-white dark:bg-gray-800 w-full p-4">
+    <div className="w-64 m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer h-90">
+        <a href="#" className="block w-full h-full">
+            <img alt="blog photo" src="https://placehold.jp/3d4070/ffffff/150x150.png" className="object-cover w-full max-h-40"/>
+            <div className="w-full p-4 bg-white dark:bg-gray-800">
                 <div className="mb-2">{tags.map(tag => {
                   return <span className="mr-2"><Pill active label={tag.label} customColor={tag.color}/></span>
                 })}</div>
-                <p className="text-gray-800 dark:text-white text-md font-medium mb-2">
+                <p className="mb-2 font-medium text-gray-800 dark:text-white text-md">
                     {title}
                 </p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs leading-5">
+                <p className="text-sm leading-5 text-gray-600 dark:text-gray-300">
                     {content}
                 </p>
-                <div className="my-4 text-xs p-2 bg-slate-100 rounded-lg">{metrics.map((metric, index) => {
+                <div className="p-2 my-4 text-sm rounded-lg bg-slate-100">{metrics.map((metric, index) => {
                   return <div className={`flex justify-between ${index ? 'border-t border-slate-200 mt-1 pt-1' : ''}`}>
                     <div className="text-gray-500">{metric.key}</div>
                     <div className="text-gray-700">{metric.value}</div>

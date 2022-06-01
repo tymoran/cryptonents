@@ -52,7 +52,7 @@ export const ProjectCard = ({
                 <p className="mb-2 font-medium text-gray-800 dark:text-white text-md">
                     {title}
                 </p>
-                <p className="text-sm leading-5 text-gray-600 dark:text-gray-300">
+                <p className="text-sm leading-6 text-gray-600 dark:text-gray-300">
                     {content}
                 </p>
                 <div className="p-2 my-4 text-sm rounded-lg bg-slate-100">{metrics.map((metric, index) => {

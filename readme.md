@@ -34,4 +34,5 @@ Contributions are currently not accepted.
 ## License
 
 Cryptonents is licensed under the MIT license.
+
 &copy; 2022 - Tymoran
